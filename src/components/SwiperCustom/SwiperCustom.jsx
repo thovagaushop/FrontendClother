@@ -2,6 +2,10 @@ import { Navigation, Pagination } from "swiper/modules";
 import { SwiperSlide, Swiper } from "swiper/react";
 import { useEffect, useState } from "react";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 export default function SwiperCustom({ images }) {
   const [headerHeight, setHeaderHeight] = useState(0);
 

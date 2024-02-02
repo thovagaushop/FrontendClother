@@ -26,6 +26,7 @@ import MainHeader from "./components/home/Header/MainHeader";
 import MainFooter from "./components/home/Footer/MainFooter";
 import Home2 from "./pages/Home/Home2";
 import Shop2 from "./pages/Shop/Shop2";
+import Login from "./pages/Account/Login";
 
 const Layout = () => {
   return (
@@ -59,7 +60,7 @@ const router = createBrowserRouter(
         <Route path="/paymentgateway" element={<Payment />}></Route> */}
       </Route>
       <Route path="/signup" element={<SignUp />}></Route>
-      <Route path="/signin" element={<SignIn />}></Route>
+      <Route path="/signin" element={<Login />}></Route>
     </Route>
   )
 );

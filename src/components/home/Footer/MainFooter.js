@@ -3,8 +3,8 @@ import React from "react";
 export default function MainFooter() {
   return (
     <footer className="bg-[#f4f4f4] flex justify-center flex-col items-center mt-[100px]">
-      <div class="py-[52px] w-[100%] h-[344px] flex justify-center">
-        <div class="flex">
+      <div class="w-full py-[52px] w-[100%] h-[344px] flex justify-center">
+        <div class="px-[200px] w-full flex justify-between">
           <div class="flex-col w-[246.41px] h-[240px]">
             <div>
               <span class="font-bold text-[17px] ">Về uniqlo</span>

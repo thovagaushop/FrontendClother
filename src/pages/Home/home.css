@@ -1,6 +1,9 @@
-.verticalSwiper .swiper-pagination {
-    height: 100%;
-    left: 0px !important;
-    bottom: 0px !important;
-    top: revert !important;
+.verticalSwiper {
+    position: relative;
+}
+
+.verticalSwiper .swiper-pagination-vertical {
+    position: absolute;
+    left: 0 !important;
+    margin: 400px 0px 0px 30px
 }
