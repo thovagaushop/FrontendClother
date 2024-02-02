@@ -43,6 +43,15 @@ import banner1 from "./banner/aothun.jpg";
 import product1InCart from "./cart/vngoods_11_467212.webp";
 import product2InCart from "./cart/vngoods_52_444966.webp";
 
+// Background Image
+import background1 from "./background1.jpg";
+import background2 from "./background2.jpg";
+import background3 from "./background3.jpg";
+import background4 from "./background4.jpg";
+import background5 from "./background5.jpg";
+import background6 from "./background6.jpg";
+import background7 from "./background7.jpg";
+
 export {
   logo,
   uniqlo,
@@ -86,4 +95,13 @@ export {
   // Cart
   product1InCart,
   product2InCart,
+
+  // Background Image
+  background1,
+  background2,
+  background3,
+  background4,
+  background5,
+  background6,
+  background7,
 };

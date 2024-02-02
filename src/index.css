@@ -33,12 +33,13 @@ nav .active li {
   display: none;
 }
 
-.bg-background1 {
-  background-image: url("./assets//images/background1.jpg");
-}
-
-.bg-background2 {
-  background-image: url("./assets//images/background2.jpg");
-}
-
 /* ============= NavLink active End here ================ */
+
+/* Swiper */
+.swiper .swiper-button-next, .swiper .swiper-button-prev {
+  color: white;
+}
+
+.swiper .swiper-pagination-bullet {
+  background: white;
+}

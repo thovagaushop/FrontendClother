@@ -1,55 +1,43 @@
-import React from "react";
-import { uniqlo } from "../../assets/images";
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Mousewheel } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./home.css";
+import { background1, background2, background3 } from "../../assets/images";
+import SwiperCustom from "../../components/SwiperCustom/SwiperCustom";
 
 export default function Home2() {
+  const [headerHeight, setHeaderHeight] = useState(0);
+  useEffect(() => {
+    const headerHeight = document.getElementById("main-header");
+    setHeaderHeight(headerHeight.offsetHeight);
+  }, []);
   return (
-    <div className="px-[100px]">
-      <div className="w-[100%] flex flex-col">
-        <div
-          className="bg-background1 bg-cover bg-center h-screen w-[100%]"
-          // style={{ backgroundImage: "url(../../assets/images/background1.jpg)" }}
+    <div className="bg-red-400">
+      <session>
+        <Swiper
+          direction="vertical"
+          pagination={{
+            clickable: true,
+            bulletClass: "swiper-pagination-bullet",
+          }}
+          mousewheel={true}
+          modules={[Mousewheel, Pagination]}
+          className="verticalSwiper"
+          style={{ height: `calc(100vh - ${headerHeight + 10}px)` }}
         >
-          <div className="flex justify-between text-[54px] h-screen items-center px-[20px]">
-            <button>
-              <span className="text-white">
-                <i className="fa-solid fa-chevron-left"></i>
-              </span>
-            </button>
-            <button>
-              <span className="text-white">
-                <i className="fa-solid fa-chevron-right"></i>
-              </span>
-            </button>
-          </div>
-        </div>
-        <div
-          className="bg-background2 bg-cover bg-center h-screen"
-          // style={{ backgroundImage: "url(../../assets/images/background1.jpg)" }}
-        >
-          <div>
-            <img
-              className="object-cover w-screep h-[60px] pt-[30px] pl-[30px]"
-              src={uniqlo}
-              alt=""
-            />
-          </div>
-          <h2 className="text-white font-bold text-[50px] flex items-center pl-[20px] h-screen">
-            <span>BỘ SƯU TẬP LifeWear</span>
-            <div className="flex justify-between text-[54px] h-screen items-center px-[20px]">
-              <button>
-                <span className="text-white">
-                  <i className="fa-solid fa-chevron-left"></i>
-                </span>
-              </button>
-              <button>
-                <span className="text-white">
-                  <i className="fa-solid fa-chevron-right"></i>
-                </span>
-              </button>
-            </div>
-          </h2>
-        </div>
-      </div>
+          <SwiperSlide>
+            <SwiperCustom images={[background1, background2, background3]} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div> Slide 2 </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div> Slide 3 </div>
+          </SwiperSlide>
+        </Swiper>
+      </session>
     </div>
   );
 }

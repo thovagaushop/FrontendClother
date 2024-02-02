@@ -33,8 +33,8 @@ const Layout = () => {
       <MainHeader />
       {/* <Header />
       <HeaderBottom /> */}
-      <SpecialCase />
-      <ScrollRestoration />
+      {/* <SpecialCase />
+      <ScrollRestoration /> */}
       <Outlet />
       {/* <Footer />
       <FooterBottom /> */}
